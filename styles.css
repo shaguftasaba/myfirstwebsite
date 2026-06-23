@@ -1,0 +1,84 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, sans-serif;
+  background: #f7f7fb;
+  color: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top, #eef2ff 0%, #f7f7fb 40%, #ffffff 100%);
+}
+
+.site-header {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.86);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(14px);
+  z-index: 10;
+}
+
+.site-nav {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #334155;
+  font-weight: 600;
+  padding: 0.6rem 0.8rem;
+  border-radius: 999px;
+}
+
+.site-nav a:hover {
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.page-content {
+  width: min(1120px, calc(100% - 3rem));
+  margin: 2rem auto 3rem;
+  flex: 1;
+}
+
+.page-content section {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.06);
+}
+
+.page-content h1 {
+  margin-top: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+
+.page-content p {
+  margin: 1.2rem 0 0;
+  color: #475569;
+  line-height: 1.75;
+}
+
+.site-footer {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: #f8fafc;
+  border-top: 1px solid rgba(148, 163, 184, 0.18);
+  text-align: center;
+  font-size: 0.95rem;
+  color: #64748b;
+}
