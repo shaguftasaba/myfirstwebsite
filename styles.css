@@ -168,7 +168,7 @@ select {
   max-width: 80ch;
 }
 
-.page-content ul {
+..page-content ul {
   margin: 1.2rem 0 0;
   padding-left: 1.25rem;
   color: #475569;
@@ -177,6 +177,31 @@ select {
 
 .page-content li {
   margin: 0.65rem 0;
+}
+
+.project-item {
+  background: #f8fafc;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 22px;
+  padding: 1.75rem;
+  margin-top: 1.75rem;
+}
+
+.project-item h2 {
+  margin-top: 0;
+  font-size: clamp(1.45rem, 2vw, 1.9rem);
+}
+
+.project-item p {
+  margin: 1rem 0 0;
+}
+
+.project-closing {
+  margin-top: 2.5rem;
+  padding: 1.75rem;
+  background: #eef2ff;
+  border-radius: 22px;
+  border: 1px solid rgba(99, 102, 241, 0.14);
 }
 
 .page-content hr {
