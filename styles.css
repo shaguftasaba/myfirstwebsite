@@ -26,7 +26,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at 20% 10%, rgba(139, 58, 58, 0.15) 0%, transparent 25%), radial-gradient(circle at 85% 90%, rgba(139, 58, 58, 0.08) 0%, transparent 20%);
+  background: radial-gradient(circle at 20% 10%, rgba(107, 142, 35, 0.15) 0%, transparent 25%), radial-gradient(circle at 85% 90%, rgba(112, 66, 20, 0.08) 0%, transparent 20%);
   pointer-events: none;
   z-index: -1;
 }
@@ -47,7 +47,7 @@ select {
   width: 100%;
   padding: 1rem 1.5rem;
   background: rgba(250, 246, 241, 0.95);
-  border-bottom: 1px solid rgba(139, 58, 58, 0.15);
+  border-bottom: 1px solid rgba(107, 142, 35, 0.15);
   position: sticky;
   top: 0;
   backdrop-filter: blur(18px);
@@ -65,7 +65,7 @@ select {
 
 .site-nav a {
   text-decoration: none;
-  color: #5a3a3a;
+  color: #704214;
   font-weight: 600;
   padding: 0.75rem 1rem;
   border-radius: 999px;
@@ -74,13 +74,13 @@ select {
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-  background: rgba(139, 58, 58, 0.12);
+  background: rgba(107, 142, 35, 0.12);
   color: #2d1f1f;
   transform: translateY(-1px);
 }
 
 .site-nav a.active {
-  background: #8b3a3a;
+  background: #6B8E23;
   color: #faf6f1;
 }
 
@@ -95,7 +95,7 @@ select {
   padding: 2.25rem;
   border-radius: 28px;
   box-shadow: 0 24px 80px rgba(45, 31, 31, 0.08);
-  border: 1px solid rgba(139, 58, 58, 0.12);
+  border: 1px solid rgba(107, 142, 35, 0.12);
 }
 
 .hero-section {
@@ -111,7 +111,7 @@ select {
   padding: 0.95rem 1.35rem;
   border-radius: 999px;
   border: none;
-  background: #8b3a3a;
+  background: #6B8E23;
   color: #faf6f1;
   text-decoration: none;
   font-weight: 700;
@@ -120,14 +120,14 @@ select {
 
 .hero-section .button:hover,
 .hero-section .button:focus-visible {
-  background: #6b2c2c;
+  background: #556B2F;
   transform: translateY(-1px);
-  box-shadow: 0 18px 35px rgba(139, 58, 58, 0.16);
+  box-shadow: 0 18px 35px rgba(107, 142, 35, 0.16);
 }
 
 .hero-section .button-secondary {
   background: #ede0d3;
-  color: #6b2c2c;
+  color: #556B2F;
 }
 
 .hero-actions {
@@ -181,7 +181,7 @@ select {
 
 .project-item {
   background: #faf6f1;
-  border: 1px solid rgba(139, 58, 58, 0.14);
+  border: 1px solid rgba(107, 142, 35, 0.14);
   border-radius: 22px;
   padding: 1.75rem;
   margin-top: 1.75rem;
@@ -201,12 +201,12 @@ select {
   padding: 1.75rem;
   background: #ede0d3;
   border-radius: 22px;
-  border: 1px solid rgba(139, 58, 58, 0.15);
+  border: 1px solid rgba(107, 142, 35, 0.15);
 }
 
 .contact-info {
   background: #faf6f1;
-  border: 1px solid rgba(139, 58, 58, 0.14);
+  border: 1px solid rgba(107, 142, 35, 0.14);
   border-radius: 22px;
   padding: 1.75rem;
   margin: 1.75rem 0;
@@ -214,11 +214,11 @@ select {
 
 .contact-info p {
   margin: 0.85rem 0;
-  color: #5a3a3a;
+  color: #704214;
 }
 
 .contact-info a {
-  color: #8b3a3a;
+  color: #6B8E23;
   text-decoration: none;
   font-weight: 600;
   transition: color 180ms ease;
@@ -226,7 +226,7 @@ select {
 
 .contact-info a:hover,
 .contact-info a:focus-visible {
-  color: #6b2c2c;
+  color: #556B2F;
   text-decoration: underline;
 }
 
@@ -234,14 +234,14 @@ select {
   margin: 2.2rem 0;
   border: none;
   height: 1px;
-  background: linear-gradient(90deg, rgba(139, 58, 58, 0), rgba(139, 58, 58, 0.4), rgba(139, 58, 58, 0));
+  background: linear-gradient(90deg, rgba(107, 142, 35, 0), rgba(107, 142, 35, 0.4), rgba(107, 142, 35, 0));
 }
 
 .site-footer {
   width: 100%;
   padding: 1.1rem 1.5rem;
   background: #faf6f1;
-  border-top: 1px solid rgba(139, 58, 58, 0.14);
+  border-top: 1px solid rgba(107, 142, 35, 0.14);
   text-align: center;
   font-size: 0.95rem;
   color: #7a5a5a;
