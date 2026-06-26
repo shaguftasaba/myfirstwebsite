@@ -1,0 +1,219 @@
+/* ============================================
+   PROJECTS PAGE STYLES
+   ============================================ */
+
+/* Page Content */
+.page-content {
+  width: 100%;
+}
+
+/* Page Hero */
+.page-hero {
+  padding: 60px 8%;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2.4rem;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.page-subtext {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Project Item */
+.project-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 24px;
+  backdrop-filter: blur(8px);
+}
+
+.project-item h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: var(--text-main);
+}
+
+.project-item p {
+  color: var(--text-soft);
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.project-item ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 12px 0;
+}
+
+.project-item ul li {
+  color: var(--text-soft);
+  margin-bottom: 6px;
+  padding-left: 20px;
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.project-item ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent-2);
+  font-weight: bold;
+}
+
+/* ============================================
+   RESPONSIVE - PROJECTS PAGE
+   ============================================ */
+
+/* Large Desktop (1200px and up) */
+@media (max-width: 1200px) {
+  .page-title {
+    font-size: 2.2rem;
+  }
+
+  .project-item h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablet (1024px) */
+@media (max-width: 1024px) {
+  .page-hero {
+    padding: 50px 6%;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .project-item {
+    padding: 20px;
+  }
+
+  .project-item h2 {
+    font-size: 1.1rem;
+  }
+
+  .project-item p,
+  .project-item ul li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile (768px) */
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 50px 5%;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .page-subtext {
+    font-size: 0.95rem;
+  }
+
+  .project-item {
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+
+  .project-item h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .project-item p {
+    font-size: 0.9rem;
+  }
+
+  .project-item ul li {
+    margin-bottom: 5px;
+    padding-left: 18px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile (480px) */
+@media (max-width: 480px) {
+  .page-hero {
+    padding: 40px 4%;
+  }
+
+  .page-title {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+
+  .page-subtext {
+    font-size: 0.9rem;
+  }
+
+  .page-content {
+    padding: 0;
+  }
+
+  .section {
+    padding: 40px 4%;
+  }
+
+  .project-item {
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+
+  .project-item h2 {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  .project-item p {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+  }
+
+  .project-item ul li {
+    margin-bottom: 4px;
+    padding-left: 16px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra Small Mobile (below 360px) */
+@media (max-width: 360px) {
+  .page-hero {
+    padding: 30px 3%;
+  }
+
+  .page-title {
+    font-size: 1.1rem;
+  }
+
+  .section {
+    padding: 30px 3%;
+  }
+
+  .project-item {
+    padding: 14px;
+    margin-bottom: 10px;
+  }
+
+  .project-item h2 {
+    font-size: 0.9rem;
+  }
+
+  .project-item p,
+  .project-item ul li {
+    font-size: 0.75rem;
+  }
+}

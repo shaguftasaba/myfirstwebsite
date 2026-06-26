@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="admin-page">
+
+  <div class="admin-dashboard">
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+      <div class="sidebar-header">
+        <h2>Admin Panel</h2>
+        <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" data-section="forms">
+          <span class="icon">📋</span>
+          <span class="label">All Forms</span>
+        </a>
+        <a href="#" class="nav-item" data-section="stats">
+          <span class="icon">📊</span>
+          <span class="label">Statistics</span>
+        </a>
+        <a href="#" class="nav-item" data-section="settings">
+          <span class="icon">⚙️</span>
+          <span class="label">Settings</span>
+        </a>
+      </nav>
+
+      <button id="logoutBtn" class="logout-btn">🚪 Logout</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-content">
+      <header class="admin-header">
+        <h1 id="pageTitle">Form Submissions</h1>
+        <div class="admin-actions">
+          <span id="userInfo" class="user-info">Admin</span>
+          <button id="refreshBtn" class="action-btn" title="Refresh">🔄</button>
+        </div>
+      </header>
+
+      <!-- Forms Section -->
+      <section id="formsSection" class="admin-section active">
+        <div class="section-header">
+          <h2>Contact Form Submissions</h2>
+          <div class="section-controls">
+            <input 
+              type="text" 
+              id="searchInput" 
+              placeholder="Search by name or email..." 
+              class="search-input"
+            />
+            <button id="clearAllBtn" class="btn-danger small">Clear All</button>
+          </div>
+        </div>
+
+        <div class="forms-stats">
+          <div class="stat-card">
+            <span class="stat-label">Total Forms</span>
+            <span id="totalForms" class="stat-value">0</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Unread</span>
+            <span id="unreadForms" class="stat-value">0</span>
+          </div>
+        </div>
+
+        <div id="formsContainer" class="forms-container">
+          <div class="empty-state">
+            <p>📭 No form submissions yet</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Statistics Section -->
+      <section id="statsSection" class="admin-section">
+        <div class="section-header">
+          <h2>Statistics</h2>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card large">
+            <span class="stat-label">Total Submissions</span>
+            <span id="statTotal" class="stat-value">0</span>
+          </div>
+          <div class="stat-card large">
+            <span class="stat-label">Read Forms</span>
+            <span id="statRead" class="stat-value">0</span>
+          </div>
+          <div class="stat-card large">
+            <span class="stat-label">Unread Forms</span>
+            <span id="statUnread" class="stat-value">0</span>
+          </div>
+        </div>
+
+        <div class="recent-forms">
+          <h3>Recent Submissions</h3>
+          <div id="recentFormsContainer" class="recent-list">
+            <div class="empty-state">
+              <p>No submissions yet</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Settings Section -->
+      <section id="settingsSection" class="admin-section">
+        <div class="section-header">
+          <h2>Settings</h2>
+        </div>
+
+        <div class="settings-group">
+          <h3>Admin Information</h3>
+          <div class="setting-item">
+            <label>Current Admin User:</label>
+            <p>admin</p>
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <h3>Danger Zone</h3>
+          <button id="clearAllSettingsBtn" class="btn-danger">Delete All Submissions</button>
+          <p class="warning-text">⚠️ This action cannot be undone</p>
+        </div>
+
+        <div class="settings-group">
+          <h3>API Information</h3>
+          <div class="setting-item">
+            <label>API Base URL:</label>
+            <code>/api/admin</code>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal for viewing form details -->
+  <div id="formModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Form Details</h2>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-footer">
+        <button id="deleteFormBtn" class="btn-danger">Delete Form</button>
+        <button class="modal-close-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/admin-dashboard.js"></script>
+
+</body>
+</html>

@@ -4,14 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Shagufta Saba</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/about.css" />
 </head>
 <body>
 
   <!-- Navbar -->
   <header class="navbar">
-    <div class="logo">Shagufta Saba</div>
-    <nav>
+    <a href="index.html" class="logo" aria-label="Shagufta Saba home">
+      Shagufta Saba
+    </a>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="navMenu">
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html" class="active">About</a></li>
@@ -21,13 +29,32 @@
     </nav>
   </header>
 
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+  </script>
+
   <!-- About Hero -->
   <section class="section page-hero">
     <div class="section-heading center">
       <p class="section-tag">About Me</p>
       <h1 class="page-title">A Commerce Student Exploring AI, Creativity & Digital Growth</h1>
       <p class="section-text page-subtext">
-        I’m building a journey where business understanding, modern technology,
+        I'm building a journey where business understanding, modern technology,
         and thoughtful creativity come together to shape meaningful digital work.
       </p>
     </div>
@@ -38,7 +65,7 @@
     <div class="about-grid">
       <div class="about-card large-card">
         <p class="section-tag">Who I Am</p>
-        <h2>Hi, I’m Shagufta Saba</h2>
+        <h2>Hi, I'm Shagufta Saba</h2>
         <p>
           I am a B.Com student with a growing passion for Artificial Intelligence,
           web development, and creative digital work. My learning journey is rooted
@@ -46,127 +73,74 @@
           through technology and business understanding.
         </p>
         <p>
-          I believe that commerce and technology can work beautifully together.
-          That’s why I’m exploring how business thinking, AI, and digital creativity
-          can be combined to create useful, elegant, and future-focused solutions.
-        </p>
-      </div>
-
-      <div class="about-card side-card">
-        <p class="section-tag">My Focus</p>
-        <h3>What I’m Building</h3>
-        <ul class="about-list">
-          <li>Strong understanding of commerce and business fundamentals</li>
-          <li>Portfolio and website creation using HTML & CSS</li>
-          <li>Exploration of AI, digital tools, and creative learning</li>
-          <li>Confidence in building meaningful personal projects</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- My Journey -->
-  <section class="section journey-section">
-    <div class="section-heading center">
-      <p class="section-tag">My Journey</p>
-      <h2>Learning Step by Step With Purpose</h2>
-      <p class="section-text">
-        My journey is not just about studying — it is about turning what I learn into
-        something practical, creative, and impactful. Every project, every design,
-        and every new skill is part of the path I’m building for myself.
-      </p>
-    </div>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Business Mindset</h3>
-        <p>
-          As a commerce student, I naturally connect with ideas related to business,
-          finance, structure, growth, and value creation.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Creative Exploration</h3>
-        <p>
-          I enjoy expressing ideas through visual presentation, branding concepts,
-          website design, and clean digital layouts.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Technology & AI</h3>
-        <p>
-          I’m exploring how AI and digital tools can improve productivity, creativity,
-          and the way modern work is built and presented.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Values / Vision -->
-  <section class="section values-section">
-    <div class="section-heading">
-      <p class="section-tag">My Vision</p>
-      <h2>What I Want to Grow Into</h2>
-    </div>
-
-    <div class="values-grid">
-      <div class="about-card">
-        <h3>Purposeful Learning</h3>
-        <p>
-          I want every skill I learn to move me closer to real growth, stronger confidence,
-          and practical digital capability.
+          I believe that the best ideas come from combining diverse knowledge — bringing together
+          commerce thinking, technological innovation, and creative problem-solving to create
+          work that has real impact.
         </p>
       </div>
 
       <div class="about-card">
-        <h3>Elegant Work</h3>
+        <p class="section-tag">My Journey</p>
+        <h2>Learning & Growing</h2>
         <p>
-          I’m drawn to work that feels clean, thoughtful, visually appealing,
-          and meaningful — not just functional.
+          Starting with a B.Com background, I've ventured into the world of technology and AI.
+          Through hands-on learning, project building, and continuous exploration, I'm developing
+          skills that bridge the gap between business and technology.
         </p>
       </div>
 
       <div class="about-card">
-        <h3>Future-Ready Growth</h3>
+        <p class="section-tag">What Drives Me</p>
+        <h2>My Passion</h2>
         <p>
-          My goal is to become someone who can combine business understanding,
-          creativity, and modern technology to create value in the digital world.
+          I'm driven by the desire to create digital solutions that solve real-world problems.
+          Whether it's building a website, exploring AI applications, or thinking through
+          business strategies, I love bringing ideas to life.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <p class="section-tag">Skills & Learning</p>
+        <h2>What I'm Building</h2>
+        <p>
+          Web Development (HTML, CSS, JavaScript), AI Exploration, Business Analysis,
+          Problem-Solving, Creative Thinking, and a continuous commitment to learning
+          new technologies and frameworks.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <p class="section-tag">The Vision</p>
+        <h2>Where I'm Headed</h2>
+        <p>
+          My goal is to become a professional who can work at the intersection of business,
+          design, and technology. I want to build products and solutions that create value
+          and make a meaningful difference.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <p class="section-tag">Let's Connect</p>
+        <h2>Get to Know Me</h2>
+        <p>
+          I'm always open to connecting with like-minded people, discussing ideas,
+          collaborating on projects, and learning from others. If my journey resonates
+          with you, let's talk!
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Skills Snapshot -->
-  <section class="section skills-snapshot">
-    <div class="section-heading center">
-      <p class="section-tag">Skills Snapshot</p>
-      <h2>What I’m Currently Learning & Strengthening</h2>
-    </div>
-
-    <div class="skill-tags">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>Portfolio Design</span>
-      <span>Business Understanding</span>
-      <span>AI Exploration</span>
-      <span>Creative Branding</span>
-      <span>Digital Learning</span>
-      <span>Web Structure</span>
-    </div>
-  </section>
-
-  <!-- Closing CTA -->
+  <!-- Call to Action -->
   <section class="section cta-section">
     <div class="cta-box">
-      <p class="section-tag">Let’s Connect</p>
-      <h2>Thank You for Visiting My Portfolio</h2>
+      <p class="section-tag">Let's Connect</p>
+      <h2>Ready to Collaborate or Chat?</h2>
       <p>
-        I’m continuously learning, building, and growing through every step of this journey.
-        If you’d like to connect, collaborate, or explore my work further, I’d love to hear from you.
+        Whether you want to discuss ideas, explore collaboration opportunities, or just say hello,
+        I'd love to hear from you. Let's build something great together!
       </p>
-      <a href="contact.html" class="btn primary-btn">Contact Me</a>
+      <a href="contact.html" class="btn primary-btn">Get In Touch</a>
     </div>
   </section>
 

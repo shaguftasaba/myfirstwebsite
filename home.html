@@ -4,17 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home - Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/home.css" />
 </head>
 <body>
-  <header class="site-header">
-    <nav class="site-nav">
-      <a href="home.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+  <header class="navbar">
+    <a href="home.html" class="logo">Shagufta Saba</a>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="navMenu">
+      <ul class="nav-links">
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
+
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+  </script>
 
   <main class="page-content">
     <section class="hero-section">
